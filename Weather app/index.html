@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main class="main ">
         <div class="container">
-            <div class="search_box"></div>
+            <div class="search_box"><h1>Search the city:</h1></div>
             <input type="text" class="input__main" name="" id="">
             <div class="svg">
-                <img src="search-svgrepo-com.svg" alt="" id="search__image">
+                <img id='search_img' src="jpg/search-svgrepo-com.svg" alt="" >
             </div>
 
         </div>
         <h2 class="loading"> loading...</h2>
         <h2 class="alert__notFound"> not found...</h2>
         <div class="wether__box">
-            <h2>name ... </h2>
-            <p>90cg</p>
-            <p>windy</p>
-            <p>wind speed </p>
+            <h2 id="City_name"> </h2>
+            <p id="City_deg"></p>
+            <p id="City_Whether"></p>
         </div>
     </main>
 
-    <script src="test.js"></script>
+    <script src="js/test.js"></script>
 </body>
 </html>

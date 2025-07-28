@@ -2,7 +2,7 @@
     width: auto;
     height: 100vh;
     
-    background-image: url(photo.jpg);
+    background-image: url(../jpg/photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -29,7 +29,7 @@
 .inputs__div{
     
     width: 100%;
-    padding: 50px;
+    padding:2% 5%;
     display: flex;
     justify-content: space-between;
 }
@@ -37,7 +37,7 @@
     border-radius: 15px;
     border-style: none;
     width: 40%;
-    height: 60px;
+    height: 6vh;
 
 }
 .btn{
