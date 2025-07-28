@@ -1,0 +1,46 @@
+body,.main,.container,.btnBox{
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background:  linear-gradient(89deg,lightblue,blue) ;
+    width: 98vw;
+    height:98vh;
+}
+.main{
+    width: 50%;
+    height: 50%;
+    /* background-color: red; */
+    flex-direction: column;
+    
+}
+.container{
+    width: 50%;
+    height: 50%;
+    /* background-color: blue; */
+    flex-direction: column;
+    gap:40px;
+    /* flex-wrap: wrap; */
+}
+.titleBox{}
+.inputBox{}
+.input{
+    width: 20rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+}
+.btnBox{
+    gap:40px;
+    justify-content: space-between;
+}
+.btns{
+    
+}
+.btn{
+    width: 8rem;
+    height: 3rem;
+    border-radius: 20px;
+    border: none;
+}
