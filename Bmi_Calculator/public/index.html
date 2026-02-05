@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/tailwind_Output.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="w-[100vw] h-[100vh]">
+     <div class="container_ size-full  flex justify-center items-center bg-gray-500 "  >
+        <div class="box-items flex flex-col items-center justify-around min-w-4/5 h-96 rounded-xl bg-gray-600 xl:w-2/5 xl:min-h-80  md:h-96 md:min-w-2/4 md:max-w-3/5 ">
+            <div class="item_weight flex items-center gap-5   w-4/5 h-1/4 ">
+
+                 <input id="Width_Range" class="w-4/5" type="range" name=""  min="0" max="200" value="0">
+
+                 <p id="Weight_Number" class="text-2xl w-1/5 text-2xl text-amber-100">0 kg</p> 
+
+            </div>
+            <div class="item_height flex items-center gap-5  w-4/5 h-1/4  ">
+
+                <input  id="Height_Range" class="w-4/5" type="range" name="" min="0" max="200" value="0">
+
+                <p id="Height_Number" class="text-2xl w-1/5 text-2xl text-amber-100">0 cm</p>
+
+            </div>
+            <div class="Box-Status flex flex items-center   flex-col items-center justify-around w-4/5 h-1/5  mb-7 ">
+
+                <p id="BMI_Number" class="Number-Bmi text-3xl text-amber-50">0</p>
+
+                <p id="BMI_Status" class=" text-2xl text-4xl">You not born!!</p>
+
+            </div>
+        </div>
+        
+
+     </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
