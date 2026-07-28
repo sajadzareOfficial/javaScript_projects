@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/tailwind_Output.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="flex h-screen items-center justify-between flex-col bg-Body ">
+    <header class=" w-full h-1/12 bg-white/40 text-2xl flex justify-center items-center ">
+        <h1 class="text-white italic">this is header</h1>
+    </header>
+    <main class="w-full flex min-h-4/5 items-center justify-center relative  bg-Body ">
+        <div class="Big_circles w-1/2  h-auto flex items-center justify-center  absolute 
+        right-0 top-0  ">
+            <div
+                class="circles size-36 bg-gradient-to-l from-pink-300 to-sky-400 animate-bounce rounded-full  shadow-sm shadow-red-400">
+            </div>
+        </div>
+        <div
+            class="form_Container z-20 min-w-1/2 min-h-4/5   bg-white/20 shadow-2xl shadow-red-400/60  flex items-center flex-col justify-center ring-1 ring-gray-400 rounded-sm relative ">
+            <div class="circle_prof ring ring-white absolute -top-8 bg-Body/150   rounded-full w-24 h-20 ">
+                <img src="assets/photos/ChatGPT Image Sep 25, 2025, 01_47_48 PM.png" class="size-20 m-auto " alt="">
+            </div>
+            <form id="form" name="MainForm" class="grid min-h-4/5 *:bg-Body/50 grid-cols-2  grid-rows-3  justify-center
+            gap-3
+            " action=""
+                method="post"
+                >
+                <input class="px-5 py-3 ring-1 ring-blue-300 rounded-md " type="text" name="userName"
+                    placeholder="userName" id="userName" required >
+                <input class="px-5 py-3 ring-1 ring-blue-300 rounded-md " type="text" name="userFamily"
+                    placeholder="userFamily" id="userFamily" required >
+                <input class="px-5 py-3 ring-1 ring-blue-300 rounded-md " type="text" name="password1" id="password1"
+                    placeholder="password">
+                <input class="px-5 py-3 ring-1 ring-blue-300 rounded-md " type="text" name="password2" id="password2"
+                    placeholder="repeat password" required >
+                <button class="px-2   py-2 ring-1 col-span-2  ring-blue-300 rounded-md " type="submit"
+                    id="btn">submit</button>
+            </form>
+            <div class="flex items-center justify-center gap-x-4 **:ring-1 **:ring-gray-300 **:w-5 **:h-5 **:rounded-full absolute -bottom-2.5 "
+                id="colorsBox">
+
+                <div class="bg-red-400" id="red"></div>
+                <div class="bg-blue-400" id="blue"></div>
+                <div class="bg-pink-400" id="pink"></div>
+                <div class="bg-purple-400" id="purple"></div>
+            </div>
+            
+        </div>
+
+        <div
+            class="Big_circles w-1/2 z-0 h-auto justify-center flex items-end   absolute left-1  -bottom-8 animate-bounce ">
+            <div
+                class="circles size-36 bg-gradient-to-l from-pink-300 to-sky-400 rounded-full  shadow-sm shadow-red-400">
+            </div>
+        </div>
+    </main>
+    <footer class="w-full h-2/12 flex items-center bg-white/40 justify-around text-gray-200 italic">
+        <h2>Copyright © 2026 "sajad_Zare", All rights reserved</h2>
+
+    </footer>
+    <div class="animate-ping"></div>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

@@ -25,30 +25,61 @@ const listItems = [
 
     { id: 21, name: 'Zahra', family: 'Gholami' },
     { id: 22, name: 'Matin', family: 'Sahebi' },
-    
-    
+
+
 ];
 let Current_Page = 1
 let ManyPageElem = 5;
-
 const $ = document;
 const Pages_container = $.querySelector(".Pages_container");
-const items = $.querySelector(".items"); 
-
-function Pageination_Btn_Generator(listItems, ManyPageElem){
+const items = $.querySelector(".items");
+let lastClickeed = 0;
+function Pageination_Btn_Generator(listItems, ManyPageElem) {
     let NumberOfPages = Math.ceil(listItems.length / ManyPageElem)
-    for (let i = 1; i < NumberOfPages+1; i++) {
+    for (let i = 1; i < NumberOfPages + 1; i++) {
         let BtnElem = $.createElement("div")
         BtnElem.classList = "page flex justify-center items-center border-2 rounded-xl border-purple-800 text-2xl bg-purple-100 w-1/5 h-full";
-        BtnElem.innerHTML = i    
+        BtnElem.innerHTML = i
         Pages_container.appendChild(BtnElem)
-        let latestElem = 0 ;
 
-        BtnElem.addEventListener("click",function(event){      
-           if(Current_Page == event.target.innerHTML){
-            event.target.classList.add("activeBtn")
-           }
+
+        BtnElem.addEventListener("click", function (event) {
+            removeActiveClass()
+            event.target.classList.add('activeBtn')
+            let extractItems = listItems.slice((event.target.innerHTML * ManyPageElem - ManyPageElem), (event.target.innerHTML * ManyPageElem))
+
+
+            while (items.firstChild) {
+                items.firstChild.remove()
+            }
+            console.log();
+
+            for (let item of extractItems) {
+                items.insertAdjacentHTML('beforeend', `<li class=" text-blue-500  w-5/8 border-4
+             border-purple-100 flex items-center justify-center
+              h-15 bg-amber-50  rounded-sm md:text-xl">
+             <span class="ml-2 text-red-400">
+             id:
+             </span>${item.id} 
+             <span class="ml-2 text-red-400">
+             name: 
+             </span>${item.name} 
+             <span class="ml-2 text-red-400">family: 
+             </span> ${item.family}   
+            </li>`)
+            }
+
         })
+
+    }
+}
+
+function removeActiveClass() {
+    for (let item of Pages_container.children) {
+        if (item.classList.contains("activeBtn")) {
+
+            item.classList.remove("activeBtn")
+        }
     }
 }
 Pageination_Btn_Generator(listItems, ManyPageElem)
